@@ -8,6 +8,12 @@ const pool = new Pool({
   }
 });
 
+// DEBUG: Log connection info (Masked)
+const connStr = process.env.DATABASE_URL || '';
+console.log('DEBUG: Connecting to DB. Length:', connStr.length);
+console.log('DEBUG: Starts with:', connStr.substring(0, 15));
+console.log('DEBUG: SSL Config:', JSON.stringify({ rejectUnauthorized: false }));
+
 module.exports = {
   query: (text, params) => pool.query(text, params),
   pool,
