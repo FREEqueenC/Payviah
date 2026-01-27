@@ -76,7 +76,10 @@ const Dashboard = () => {
             <div className="container" style={{ paddingTop: '8rem', textAlign: 'center', color: 'var(--color-error)' }}>
                 <h2>Connection Issue</h2>
                 <p style={{ margin: '1rem 0' }}>{error}</p>
-                <button className="btn-primary" onClick={() => window.location.reload()}>Retry Connection</button>
+                <div style={{ background: 'rgba(0,0,0,0.2)', padding: '0.5rem', borderRadius: '4px', fontSize: '0.8rem', fontFamily: 'monospace' }}>
+                    DEBUG: Trying to connect to: {import.meta.env.VITE_API_URL || '(Local Proxy)'}
+                </div>
+                <button className="btn-primary" onClick={() => window.location.reload()} style={{ marginTop: '1rem' }}>Retry Connection</button>
             </div>
         );
     }
