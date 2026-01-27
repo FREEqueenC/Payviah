@@ -104,11 +104,11 @@ const Dashboard = () => {
                 <div style={{ cursor: 'pointer' }} onClick={() => navigate('/trust')}>
                     <TrustScoreRing score={parseInt(trustData?.community_trust_score || 0)} size={240} />
                 </div>
-                <p style={{ marginTop: '1rem', marginBottom: '0.2rem', fontSize: '0.85rem' }}>
-                    <Link to="/trust" style={{ color: 'var(--color-text-muted)', textDecoration: 'underline' }}>How is this calculated?</Link>
-                </p>
-                <p style={{ marginTop: '0.5rem', color: 'var(--color-primary-light)', fontWeight: '500' }}>
+                <p style={{ marginTop: '1.5rem', color: 'var(--color-primary-light)', fontWeight: '500' }}>
                     By <span style={{ textDecoration: 'underline' }}>paying efficiently</span>, you're building real stability.
+                </p>
+                <p style={{ marginTop: '0.5rem', fontSize: '0.85rem' }}>
+                    <Link to="/trust" style={{ color: 'var(--color-text-muted)', textDecoration: 'underline' }}>What is a Trust Score?</Link>
                 </p>
             </div>
 
