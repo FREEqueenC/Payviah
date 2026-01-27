@@ -90,10 +90,10 @@ const Dashboard = () => {
             <Header user={user} />
 
             <div style={{ marginBottom: '3rem' }}>
-                <p style={{ color: '#E2E8F0', fontSize: '1.1rem', fontWeight: '500', marginBottom: '0.5rem' }}>
+                <p style={{ color: 'var(--color-text-main)', fontSize: '1.1rem', fontWeight: '500', marginBottom: '0.5rem' }}>
                     Advances built on <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', color: 'var(--color-success)' }}>Trust</span>, not fees.
                 </p>
-                <p style={{ color: '#94A3B8', fontSize: '0.95rem', maxWidth: '450px', lineHeight: '1.6' }}>
+                <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', maxWidth: '450px', lineHeight: '1.6' }}>
                     Direct support for essentials—salons, childcare, auto repair—to keep you moving forward.
                 </p>
             </div>
