@@ -4,6 +4,7 @@ import TransactionFeed from '../components/TransactionFeed';
 import ReliabilityMeter from '../components/ReliabilityMeter';
 import NewRequestModal from '../components/NewRequestModal';
 import RequestGraceModal from '../components/RequestGraceModal';
+import Header from '../components/Header';
 import { api } from '../services/api';
 
 const Dashboard = () => {
