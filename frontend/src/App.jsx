@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
-
 import TrustScoreExplainer from './pages/TrustScoreExplainer';
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/trust" element={<TrustScoreExplainer />} />
+            <Route path="/trust-score-explainer" element={<TrustScoreExplainer />} />
           </Routes>
         </main>
       </div>

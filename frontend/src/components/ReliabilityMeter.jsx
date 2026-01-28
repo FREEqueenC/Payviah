@@ -4,7 +4,7 @@ const ReliabilityMeter = ({ essentialSpend = 0, verifiedHistory = 0, proactiveCo
     const metrics = [
         { label: 'Essential Spend', value: essentialSpend, color: 'var(--color-primary-light)' },
         { label: 'Verified History', value: verifiedHistory, color: 'var(--color-secondary)' },
-        { label: 'Proactive Comm.', value: proactiveComm, color: '#38BDF8' } // Sky blue for comms
+        { label: 'Communication Score', value: proactiveComm, color: '#38BDF8' } // Sky blue for comms
     ];
 
     return (

@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import TrustScoreRing from '../components/TrustScoreRing';
 import TransactionFeed from '../components/TransactionFeed';
@@ -101,15 +102,29 @@ const Dashboard = () => {
 
             <div className="glass-panel" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
                 <h2 style={{ marginBottom: '1.5rem' }}>Community Trust Score</h2>
-                <div style={{ cursor: 'pointer' }} onClick={() => navigate('/trust')}>
+                <div style={{ cursor: 'default' }}>
                     <TrustScoreRing score={parseInt(trustData?.community_trust_score || 0)} size={240} />
                 </div>
                 <p style={{ marginTop: '1.5rem', color: 'var(--color-primary-light)', fontWeight: '500' }}>
                     By <span style={{ textDecoration: 'underline' }}>paying efficiently</span>, you're building real stability.
                 </p>
-                <p style={{ marginTop: '0.5rem', fontSize: '0.85rem' }}>
-                    <Link to="/trust" style={{ color: 'var(--color-text-muted)', textDecoration: 'underline' }}>What is a Trust Score?</Link>
-                </p>
+                <Link
+                    to="/trust-score-explainer"
+                    style={{
+                        marginTop: '1rem',
+                        color: 'var(--color-text-muted)',
+                        fontSize: '0.875rem',
+                        textDecoration: 'none',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.25rem',
+                        transition: 'color 0.2s'
+                    }}
+                    onMouseEnter={(e) => e.target.style.color = 'var(--color-primary-light)'}
+                    onMouseLeave={(e) => e.target.style.color = 'var(--color-text-muted)'}
+                >
+                    What is a Trust Score? →
+                </Link>
             </div>
 
             <div style={{ marginTop: '2rem', display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))' }}>
