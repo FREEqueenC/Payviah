@@ -89,9 +89,25 @@ const Dashboard = () => {
 
     return (
         <div className="container" style={{ paddingTop: '2rem', paddingBottom: '4rem' }}>
+            <div style={{
+                position: 'fixed',
+                top: '0',
+                left: '0',
+                width: '100%',
+                background: 'var(--color-primary)',
+                color: 'white',
+                textAlign: 'center',
+                fontSize: '0.75rem',
+                fontWeight: 'bold',
+                padding: '0.25rem',
+                zIndex: '1000'
+            }}>
+                IN PRODUCTION DEMO
+            </div>
+
             <Header user={user} />
 
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginBottom: '3rem', marginTop: '1rem' }}>
                 <p style={{ color: 'var(--color-text-main)', fontSize: '1.1rem', fontWeight: '500', marginBottom: '0.5rem' }}>
                     Advances built on <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', color: 'var(--color-success)' }}>Trust</span>, not fees.
                 </p>
@@ -111,17 +127,23 @@ const Dashboard = () => {
                 <Link
                     to="/trust-score-explainer"
                     style={{
-                        marginTop: '1rem',
-                        color: 'var(--color-text-muted)',
-                        fontSize: '0.875rem',
+                        marginTop: '1.5rem',
+                        color: 'var(--color-background-end)',
+                        backgroundColor: 'var(--color-primary-light)',
+                        fontSize: '1.1rem',
+                        fontWeight: '700',
                         textDecoration: 'none',
                         display: 'inline-flex',
                         alignItems: 'center',
-                        gap: '0.25rem',
-                        transition: 'color 0.2s'
+                        justifyContent: 'center',
+                        gap: '0.5rem',
+                        transition: 'transform 0.2s',
+                        padding: '0.75rem 1.5rem',
+                        borderRadius: '2rem',
+                        boxShadow: '0 4px 15px rgba(168, 85, 247, 0.4)'
                     }}
-                    onMouseEnter={(e) => e.target.style.color = 'var(--color-primary-light)'}
-                    onMouseLeave={(e) => e.target.style.color = 'var(--color-text-muted)'}
+                    onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
+                    onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
                 >
                     What is a Trust Score? →
                 </Link>
