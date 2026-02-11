@@ -7,10 +7,10 @@ const Header = ({ user }) => {
             <div className="brand-section">
                 {/* Logo Icon with Neon Glow */}
                 <div className="logo-box">
-                    <span className="logo-text">N</span>
+                    <span className="logo-text">P</span>
                 </div>
                 {/* Main Title */}
-                <h1 className="brand-title">Nexum</h1>
+                <h1 className="brand-title">Payviah</h1>
             </div>
 
             {/* Right Side: User Profile Zone */}

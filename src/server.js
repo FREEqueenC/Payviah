@@ -17,6 +17,19 @@ app.use('/api/users', userRoutes);
 app.use('/api/transactions', transactionRoutes);
 app.use('/api/notifications', notificationRoutes);
 
+// Serve static files from the React frontend app
+const path = require('path');
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+// Anything that doesn't match the above, send back index.html
+app.get('*', (req, res) => {
+    // Check if request is for API
+    if (req.path.startsWith('/api')) {
+        return res.status(404).json({ error: 'API endpoint not found' });
+    }
+    res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
+});
+
 // Health Check Endpoint
 app.get('/health', async (req, res) => {
     try {

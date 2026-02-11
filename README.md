@@ -1,6 +1,6 @@
 # Payviah
 
-**Payviah** is a community-based Buy Now, Pay Later (BNPL) system built on trust, grace, and stability.
+**Payviah** is a community-based Buy Now, Pay Later (BNPL) system built on trust, grace, and stability. Service of ANW Foundations.
 
 ## Features
 
@@ -10,11 +10,10 @@
 
 ## Tech Stack
 
-- **Frontend**: React + Vite (deployed on Vercel)
-- **Backend**: Node.js + Express (deployed on Render)
+- **Unified App**: Node.js + React (Deployed on Render or Google Cloud Run)
 - **Database**: PostgreSQL (hosted on Neon)
 
 ## Security
 
 - **SSL**: Enforced for all database connections.
-- **Environment Variables**: Managed via Render/Vercel secrets.
+- **Environment Variables**: Managed via deployment secrets.

@@ -40,7 +40,7 @@ const Dashboard = () => {
 
             const formattedTxs = txRes.map(tx => ({
                 id: tx.id,
-                date: tx.created_at,
+                message: 'Connected to Payviah Database',
                 merchant: tx.merchant_name,
                 category: tx.category,
                 amount: parseFloat(tx.amount),
@@ -69,7 +69,7 @@ const Dashboard = () => {
                     borderRadius: '50%', margin: '0 auto 1rem', animation: 'spin 1s linear infinite'
                 }} />
                 <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
-                <p style={{ color: 'var(--color-text-muted)' }}>Connecting to Nexum Network...</p>
+                <p style={{ color: 'var(--color-text-muted)' }}>Connecting to Payviah Network...</p>
             </div>
         );
     }
