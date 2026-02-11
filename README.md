@@ -10,10 +10,9 @@
 
 ## Tech Stack
 
-- **Unified App**: Node.js + React (Deployed on Render or Google Cloud Run)
-- **Database**: PostgreSQL (hosted on Neon)
+- **Frontend Demo**: React + Vite (Hosted on GitHub Pages)
+- **Backend (Future)**: Node.js + Express
+- **Database (Future)**: PostgreSQL
 
-## Security
-
-- **SSL**: Enforced for all database connections.
-- **Environment Variables**: Managed via deployment secrets.
+## Note
+This is currently a **Frontend Demo** running with simulated data for preview purposes. No real transactions are processed.
