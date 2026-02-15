@@ -68,12 +68,13 @@ The frontend will run on `http://localhost:5173` with simulated data.
 
 1. Set up your environment variables:
 ```bash
-# Create a .env file in the root directory
+# Create a .env file in the root directory (will overwrite if exists)
 # Add your database connection string
 cat > .env << EOF
 DATABASE_URL=your_postgresql_connection_string
 EOF
 ```
+**Note**: Replace `your_postgresql_connection_string` with your actual PostgreSQL connection string.
 
 2. Build the frontend:
 ```bash
